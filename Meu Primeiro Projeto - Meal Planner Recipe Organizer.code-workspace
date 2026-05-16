@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "Meu Primeiro Projeto - Meal Planner Recipe Organizer",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "Dark Modern",
+    "files.encoding": "utf8",
+    "liveServer.settings.root": "/"
+  }
+}
