@@ -42,6 +42,7 @@ const t = () => translations[lang];
 
 function applyTranslations() {
   const tx = t();
+
   document.querySelector(".eyebrow").textContent = tx.eyebrow;
   document.querySelector(".sidebar h1").textContent = tx.h1;
   document.querySelector("#totalRecipes").nextElementSibling.textContent = tx.stats.recipes;
@@ -50,12 +51,37 @@ function applyTranslations() {
   document.querySelector(".panel-title h2").textContent = tx.shoppingTitle;
   document.querySelector("#shoppingEmpty").textContent = tx.shoppingEmpty;
   document.querySelector("#searchInput").placeholder = tx.searchPlaceholder;
+
   document.querySelectorAll("[data-filter]").forEach((btn) => {
     btn.textContent = tx.filters[btn.dataset.filter];
   });
+
   document.querySelector(".section-heading h2").textContent = tx.sectionTitle;
   document.querySelector("#emptyState").textContent = tx.emptyState;
   document.querySelector("#langToggle").textContent = tx.langButton;
+
+  const lf = tx.formLabels;
+  const labels = document.querySelectorAll(".recipe-form label");
+  labels[0].firstChild.textContent = lf.name;
+  labels[1].firstChild.textContent = lf.category;
+  labels[2].firstChild.textContent = lf.time;
+  labels[3].firstChild.textContent = lf.difficulty;
+  labels[4].firstChild.textContent = lf.ingredients;
+  labels[5].firstChild.textContent = lf.steps;
+
+  document.querySelector("#resetForm").textContent = lf.reset;
+  document.querySelector(".primary-button").textContent = lf.save;
+
+  const catSelect = document.querySelector("#recipeCategory");
+  catSelect.options[0].textContent = tx.categories.breakfast;
+  catSelect.options[1].textContent = tx.categories.lunch;
+  catSelect.options[2].textContent = tx.categories.dinner;
+
+  const diffSelect = document.querySelector("#recipeDifficulty");
+  diffSelect.options[0].textContent = tx.difficulties.Easy;
+  diffSelect.options[1].textContent = tx.difficulties.Medium;
+  diffSelect.options[2].textContent = tx.difficulties.Hard;
+
   renderRecipes();
 }
 
