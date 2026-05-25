@@ -1,77 +1,117 @@
-# Weekly Recipes
+# 🍽 Receitas da Semana
 
-Plan meals. Save recipes. Shop smarter.
+> Um caderno de receitas moderno para planejar, favoritar e comprar melhor.
 
-A browser-based meal planner and recipe organizer built with pure HTML, CSS, and JavaScript. No frameworks, no dependencies, no backend.
-
-## About the Project
-
-This project was created to solve a simple problem: keeping favorite recipes organized in one place while making grocery shopping easier.
-
-Instead of juggling notes, screenshots, and multiple browser tabs, users can save recipes, categorize them, and automatically generate shopping lists based on ingredients.
-
-Everything runs directly in the browser with local storage, so no installation or database setup is required.
-
-## Features
-
-- Create, edit, and delete recipes
-- Add photos to recipes
-- Filter recipes by:
-  - Breakfast
-  - Lunch
-  - Dinner
-  - Desserts
-  - Snacks
-  - Seafood
-  - Meat
-  - Chicken
-  - Pasta
-  - Soup
-  - Favorites
-- Search recipes by name or ingredient
-- Track cooking time and difficulty level
-- Generate shopping lists from recipe ingredients
-- Add custom shopping list items manually
-- Manage recipes, favorites, and shopping list from dashboard tabs
-- Switch between English and Portuguese
-- Save data locally using localStorage
-
-## Built With
-
-- **HTML5** – semantic structure
-- **CSS3** – Flexbox, Grid, Custom Properties, Media Queries
-- **JavaScript (Vanilla)** – DOM manipulation, filtering, local state management
-- **localStorage API** – persistent browser storage
-- **Google Fonts (Fraunces + Inter)** – typography
-
-## Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Mariwlima/meal-planner-recipe-organizer.git
-```
-
-Open the project folder and run:
-
-```bash
-npx serve .
-```
-
-Or simply open `index.html` directly in your browser.
-
-## Live Demo
-
-🔗 https://mariwlima.github.io/meal-planner-recipe-organizer/
-
-## Future Improvements
-
-- Weekly calendar meal planning
-- Dark mode
-- Export/import recipes
-- Nutrition information
-- Recipe tags and notes
+🔗 **[Acesse o projeto ao vivo](https://mariwlima.github.io/meal-planner-recipe-organizer/)**
 
 ---
 
-Made with HTML, CSS, and JavaScript by Mariana Lima.
+## 📌 Sobre o projeto
+
+O **Receitas da Semana** é um organizador de receitas que roda direto no navegador, sem instalação. Permite salvar, editar e filtrar receitas, montar uma lista de compras automática e alternar entre português e inglês.
+
+---
+
+## ✨ Funcionalidades
+
+- Salvar, editar e excluir receitas
+- Adicionar foto à receita (upload do dispositivo)
+- Filtrar por refeição: Café da manhã, Almoço, Jantar, Sobremesas, Snacks
+- Filtrar por tipo: Frango, Carne, Frutos do mar, Pasta, Sopa
+- Buscar por nome de receita ou ingrediente
+- Marcar receitas como favoritas
+- Registrar tempo de preparo e nível de dificuldade
+- Adicionar ingredientes de uma receita à lista de compras
+- Adicionar itens avulsos à lista de compras
+- Marcar itens como comprados
+- Interface em português e inglês (alternável)
+- Dados salvos localmente com localStorage
+
+---
+
+## 🚀 Como usar
+
+Abra o arquivo `index.html` no navegador — ou acesse diretamente pelo link acima.
+
+Não é necessário instalar nada.
+
+---
+
+## 🛠 Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+
+---
+
+## 📁 Estrutura
+
+```
+meal-planner-recipe-organizer/
+├── index.html
+├── styles.css
+├── app.js
+└── README.md
+```
+
+---
+
+---
+
+# 🍽 Weekly Recipes
+
+> A modern recipe notebook for planning, saving favorites, and shopping better.
+
+🔗 **[View live project](https://mariwlima.github.io/meal-planner-recipe-organizer/)**
+
+---
+
+## 📌 About
+
+**Weekly Recipes** is a browser-based recipe organizer — no installation needed. Save, edit, and filter recipes, build a shopping list automatically, and switch between Portuguese and English.
+
+---
+
+## ✨ Features
+
+- Save, edit, and delete recipes
+- Add a photo to each recipe (device upload)
+- Filter by meal: Breakfast, Lunch, Dinner, Desserts, Snacks
+- Filter by type: Chicken, Meat, Seafood, Pasta, Soup
+- Search by recipe name or ingredient
+- Mark recipes as favorites
+- Track cooking time and difficulty level
+- Add recipe ingredients to a shopping list
+- Add custom items to the shopping list
+- Mark items as purchased
+- Portuguese and English interface (switchable)
+- Data persisted locally with localStorage
+
+---
+
+## 🚀 How to use
+
+Open `index.html` in a browser — or visit the live link above.
+
+No installation required.
+
+---
+
+## 🛠 Technologies
+
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+
+---
+
+## 📁 Structure
+
+```
+meal-planner-recipe-organizer/
+├── index.html
+├── styles.css
+├── app.js
+└── README.md
+```
