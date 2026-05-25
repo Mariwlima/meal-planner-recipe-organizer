@@ -1,8 +1,6 @@
 const translations = {
   pt: {
-    eyebrow: "Receitas da Semana",
-    h1: "Receitas da Semana",
-    brandNote: "Um caderno de receitas moderno para planejar, favoritar e comprar melhor.",
+       brandNote: "Um caderno de receitas moderno para planejar, favoritar e comprar melhor.",
     stats: { recipes: "receitas", favorites: "favoritas", items: "itens" },
     shoppingTitle: "Lista de compras",
     shoppingEmpty: "Adicione ingredientes de uma receita ou item avulso.",
@@ -72,9 +70,7 @@ const translations = {
     langButton: "EN",
   },
   en: {
-    eyebrow: "Weekly Recipes",
-    h1: "Weekly Recipes",
-    brandNote: "A modern recipe notebook for planning, saving favorites, and shopping better.",
+        brandNote: "A modern recipe notebook for planning, saving favorites, and shopping better.",
     stats: { recipes: "recipes", favorites: "favorites", items: "items" },
     shoppingTitle: "Shopping list",
     shoppingEmpty: "Add ingredients from a recipe or a custom item.",
@@ -496,10 +492,7 @@ function applyTranslations() {
   const tx = t();
 
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-  document.querySelector("title").textContent = tx.h1;
-  document.querySelector(".eyebrow").textContent = tx.eyebrow;
-  document.querySelector(".sidebar h1").textContent = tx.h1;
-  document.querySelector(".brand-note").textContent = tx.brandNote;
+   document.querySelector(".brand-note").textContent = tx.brandNote;
   document.querySelector("#totalRecipes").nextElementSibling.textContent = tx.stats.recipes;
   document.querySelector("#totalFavorites").nextElementSibling.textContent = tx.stats.favorites;
   document.querySelector("#totalItems").nextElementSibling.textContent = tx.stats.items;
