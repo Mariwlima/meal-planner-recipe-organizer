@@ -6,110 +6,167 @@
     <title>Receitas da Semana</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app-shell">
-      <aside class="sidebar" aria-label="Resumo do planejador">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Navegação principal">
         <div class="brand-block">
-                   <h1>Receitas da Semana</h1>
-          <p class="brand-note">Um caderno de receitas moderno para planejar, favoritar e comprar melhor.</p>
+          <div class="brand-logo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <span class="brand-name">Receitas da Semana</span>
         </div>
 
-        <section class="quick-stats" aria-label="Estatísticas">
-          <div>
-            <span id="totalRecipes">0</span>
-            <small>receitas</small>
-          </div>
-          <div>
-            <span id="totalFavorites">0</span>
-            <small>favoritas</small>
-          </div>
-          <div>
-            <span id="totalItems">0</span>
-            <small>itens</small>
-          </div>
-        </section>
-
-        <section class="shopping-panel">
-          <div class="panel-title">
-            <h2>Lista de compras</h2>
-            <button class="icon-button" id="clearShopping" type="button" aria-label="Limpar lista">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M3 6h18" />
-                <path d="M8 6V4h8v2" />
-                <path d="m19 6-1 14H6L5 6" />
-                <path d="M10 11v5" />
-                <path d="M14 11v5" />
-              </svg>
-            </button>
-          </div>
-          <form id="shoppingForm" class="quick-add-form">
-            <input id="shoppingInput" type="text" maxlength="80" placeholder="Adicionar item avulso" />
-            <button class="icon-button add-item-button" type="submit" aria-label="Adicionar item">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M12 5v14" />
-                <path d="M5 12h14" />
-              </svg>
-            </button>
-          </form>
-          <ul id="shoppingList" class="shopping-list"></ul>
-          <p class="empty-note" id="shoppingEmpty">Adicione ingredientes de uma receita ou item avulso.</p>
-        </section>
-      </aside>
-
-      <section class="workspace">
-        <header class="topbar">
-          <div class="search-wrap">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="7" />
-              <path d="m21 21-4.3-4.3" />
-            </svg>
-            <input id="searchInput" type="search" placeholder="Buscar receita, ingrediente ou tipo" />
-          </div>
-          <button class="chip lang-toggle" type="button" id="langToggle" title="Switch language">EN</button>
-        </header>
-
-        <nav class="dashboard-tabs" aria-label="Abas do dashboard">
-          <button class="tab-button active" type="button" data-view="recipes">Receitas</button>
-          <button class="tab-button" type="button" data-view="favorites">Favoritas</button>
-          <button class="tab-button" type="button" data-view="shopping">Lista de compras</button>
+        <nav class="sidebar-nav" aria-label="Menu principal">
+          <p class="nav-section-label">Menu</p>
+          <button class="nav-item active" type="button" data-view="recipes">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>Receitas</span>
+            <span class="nav-badge" id="navBadgeRecipes">0</span>
+          </button>
+          <button class="nav-item" type="button" data-view="favorites">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.2-9A5.3 5.3 0 0 1 12 6.2 5.3 5.3 0 0 1 21.2 12C19 16.6 12 21 12 21Z"/></svg>
+            <span>Favoritas</span>
+            <span class="nav-badge" id="navBadgeFavorites">0</span>
+          </button>
+          <button class="nav-item" type="button" data-view="shopping">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span>Lista de compras</span>
+            <span class="nav-badge" id="navBadgeShopping">0</span>
+          </button>
         </nav>
 
-        <section class="filters-panel" aria-label="Filtros de receitas">
-          <div>
-            <p class="filter-label">Refeição</p>
-            <div class="filter-row" aria-label="Filtros de categoria">
-              <button class="chip active" type="button" data-category-filter="all">Todas</button>
-              <button class="chip" type="button" data-category-filter="breakfast">Café da manhã</button>
-              <button class="chip" type="button" data-category-filter="lunch">Almoço</button>
-              <button class="chip" type="button" data-category-filter="dinner">Jantar</button>
-              <button class="chip" type="button" data-category-filter="dessert">Sobremesas</button>
-              <button class="chip" type="button" data-category-filter="snack">Snacks</button>
-            </div>
+        <nav class="sidebar-nav" aria-label="Filtros de refeição">
+          <p class="nav-section-label">Refeição</p>
+          <button class="nav-item active" type="button" data-category-filter="all">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+            <span>Todas</span>
+          </button>
+          <button class="nav-item" type="button" data-category-filter="breakfast">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            <span>Café da manhã</span>
+          </button>
+          <button class="nav-item" type="button" data-category-filter="lunch">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h20"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 2a10 10 0 0 0-10 10"/></svg>
+            <span>Almoço</span>
+          </button>
+          <button class="nav-item" type="button" data-category-filter="dinner">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+            <span>Jantar</span>
+          </button>
+          <button class="nav-item" type="button" data-category-filter="dessert">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8z"/><path d="M12 6v6l4 2"/></svg>
+            <span>Sobremesas</span>
+          </button>
+          <button class="nav-item" type="button" data-category-filter="snack">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/></svg>
+            <span>Snacks</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-type-filters">
+          <p class="nav-section-label">Tipo</p>
+          <div class="type-pills-nav">
+            <button class="type-pill-nav active" type="button" data-type-filter="all">Todos</button>
+            <button class="type-pill-nav" type="button" data-type-filter="chicken">Frango</button>
+            <button class="type-pill-nav" type="button" data-type-filter="meat">Carne</button>
+            <button class="type-pill-nav" type="button" data-type-filter="seafood">Frutos do mar</button>
+            <button class="type-pill-nav" type="button" data-type-filter="pasta">Pasta</button>
+            <button class="type-pill-nav" type="button" data-type-filter="soup">Sopa</button>
           </div>
-          <label class="type-filter-label">
-            Tipo
-            <select id="typeFilter">
-              <option value="all">Todos os tipos</option>
-              <option value="seafood">Frutos do mar</option>
-              <option value="meat">Carne</option>
-              <option value="chicken">Frango</option>
-              <option value="pasta">Pasta</option>
-              <option value="soup">Sopa</option>
-              <option value="other">Outro</option>
-            </select>
-          </label>
+        </div>
+
+        <div class="sidebar-footer">
+          <button class="lang-toggle-sidebar" type="button" id="langToggle">
+            <span class="lang-opt active" id="langPT">PT</span>
+            <span class="lang-sep">/</span>
+            <span class="lang-opt" id="langEN">EN</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- WORKSPACE -->
+      <section class="workspace">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+          <div class="search-wrap">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="searchInput" type="search" placeholder="Buscar receita, ingrediente ou tipo" />
+          </div>
+          <button class="new-recipe-btn" type="button" id="openModal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            Nova receita
+          </button>
+        </header>
+
+        <!-- STATS -->
+        <div class="stats-row">
+          <div class="stat-card accent">
+            <span id="totalRecipes">0</span>
+            <small id="statRecipesLabel">receitas</small>
+          </div>
+          <div class="stat-card">
+            <span id="totalFavorites">0</span>
+            <small id="statFavoritesLabel">favoritas</small>
+          </div>
+          <div class="stat-card">
+            <span id="totalItems">0</span>
+            <small id="statItemsLabel">itens</small>
+          </div>
+        </div>
+
+        <!-- RECIPES VIEW -->
+        <section id="recipesView" class="view-panel">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Caderno</p>
+              <h2>Receitas</h2>
+            </div>
+            <p id="resultCount">0 receitas encontradas</p>
+          </div>
+          <div id="recipeGrid" class="recipe-grid"></div>
+          <p class="empty-state" id="emptyState">Nenhuma receita por aqui ainda.</p>
         </section>
 
-        <section class="recipe-form-section">
+        <!-- SHOPPING VIEW -->
+        <section id="shoppingView" class="view-panel shopping-dashboard" hidden>
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Mercado</p>
+              <h2>Lista de compras</h2>
+            </div>
+            <p id="shoppingCount">0 itens pendentes</p>
+          </div>
+          <form id="shoppingDashboardForm" class="shopping-dashboard-form">
+            <input id="shoppingDashboardInput" type="text" maxlength="80" placeholder="Adicionar ingrediente ou item" />
+            <button class="primary-button" type="submit">Adicionar</button>
+          </form>
+          <ul id="shoppingDashboardList" class="shopping-list shopping-list-large"></ul>
+          <p class="empty-state" id="shoppingDashboardEmpty">Sua lista de compras está vazia.</p>
+        </section>
+
+      </section>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+          <h2 id="modalTitle">Nova receita</h2>
+          <button class="modal-close" type="button" id="closeModal" aria-label="Fechar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+        <div class="modal-body">
           <form id="recipeForm" class="recipe-form">
             <input type="hidden" id="recipeId" />
             <input type="hidden" id="recipePhotoData" />
+
             <div class="photo-field">
               <div class="photo-preview" id="photoPreview" aria-label="Prévia da foto da receita">
                 <span>Foto da receita</span>
@@ -126,7 +183,10 @@
             <div class="form-grid">
               <label>
                 Nome da receita
-                <input id="recipeName" required maxlength="70" placeholder="Ex: Pasta cremosa de limão" />
+                <input id="recipeName" required maxlength="70"
+                  placeholder="Ex: Pasta cremosa de limão"
+                  data-placeholder-pt="Ex: Pasta cremosa de limão"
+                  data-placeholder-en="Ex: Creamy lemon pasta" />
               </label>
               <label>
                 Refeição
@@ -162,70 +222,49 @@
                 </select>
               </label>
             </div>
+
             <label>
               Ingredientes
-              <textarea
-                id="recipeIngredients"
-                required
-                rows="3"
+              <textarea id="recipeIngredients" required rows="3"
                 placeholder="Um por linha: 2 ovos, 1 tomate, arroz..."
-              ></textarea>
+                data-placeholder-pt="Um por linha: 2 ovos, 1 tomate, arroz..."
+                data-placeholder-en="One per line: 2 eggs, 1 tomato, rice..."></textarea>
             </label>
             <label>
               Preparo
-              <textarea id="recipeSteps" rows="3" placeholder="Passos rápidos para cozinhar"></textarea>
+              <textarea id="recipeSteps" rows="3"
+                placeholder="Passos rápidos para cozinhar"
+                data-placeholder-pt="Passos rápidos para cozinhar"
+                data-placeholder-en="Quick steps to cook"></textarea>
             </label>
+
             <div class="form-actions">
               <button class="secondary-button" id="resetForm" type="reset">Novo</button>
               <button class="primary-button" type="submit">Salvar receita</button>
             </div>
           </form>
-        </section>
+        </div>
+      </div>
+    </div>
 
-        <section id="recipesView" class="view-panel">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">Caderno</p>
-              <h2>Receitas</h2>
-            </div>
-            <p id="resultCount">0 receitas encontradas</p>
-          </div>
-          <div id="recipeGrid" class="recipe-grid"></div>
-          <p class="empty-state" id="emptyState">Nenhuma receita por aqui ainda.</p>
-        </section>
-
-        <section id="shoppingView" class="view-panel shopping-dashboard" hidden>
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">Mercado</p>
-              <h2>Lista de compras</h2>
-            </div>
-            <p id="shoppingCount">0 itens pendentes</p>
-          </div>
-          <form id="shoppingDashboardForm" class="shopping-dashboard-form">
-            <input id="shoppingDashboardInput" type="text" maxlength="80" placeholder="Adicionar ingrediente ou item" />
-            <button class="primary-button" type="submit">Adicionar</button>
-          </form>
-          <ul id="shoppingDashboardList" class="shopping-list shopping-list-large"></ul>
-          <p class="empty-state" id="shoppingDashboardEmpty">Sua lista de compras está vazia.</p>
-        </section>
-      </section>
-    </main>
-
+    <!-- RECIPE CARD TEMPLATE -->
     <template id="recipeCardTemplate">
       <article class="recipe-card">
         <div class="recipe-photo">
+          <span class="type-pill"></span>
           <img alt="" />
+          <div class="food-circle">
+            <img class="food-circle-img" alt="" />
+          </div>
           <button class="favorite-button" type="button" aria-label="Favoritar receita">
             <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 21s-7-4.4-9.2-9A5.3 5.3 0 0 1 12 6.2 5.3 5.3 0 0 1 21.2 12C19 16.6 12 21 12 21Z" />
+              <path d="M12 21s-7-4.4-9.2-9A5.3 5.3 0 0 1 12 6.2 5.3 5.3 0 0 1 21.2 12C19 16.6 12 21 12 21Z"/>
             </svg>
           </button>
         </div>
         <div class="card-content">
           <div class="card-header">
             <span class="category-pill"></span>
-            <span class="type-pill"></span>
           </div>
           <h3></h3>
           <div class="meta-row">
@@ -237,17 +276,10 @@
           <div class="card-actions">
             <button class="ghost-button add-shopping" type="button">Adicionar compras</button>
             <button class="icon-button edit-recipe" type="button" aria-label="Editar receita">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M12 20h9" />
-                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
-              </svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
             </button>
             <button class="icon-button delete-recipe" type="button" aria-label="Excluir receita">
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M3 6h18" />
-                <path d="M8 6V4h8v2" />
-                <path d="m19 6-1 14H6L5 6" />
-              </svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="m19 6-1 14H6L5 6"/></svg>
             </button>
           </div>
         </div>

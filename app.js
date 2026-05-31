@@ -1,6 +1,6 @@
 const translations = {
   pt: {
-       brandNote: "Um caderno de receitas moderno para planejar, favoritar e comprar melhor.",
+    brandNote: "Um caderno de receitas moderno para planejar, favoritar e comprar melhor.",
     stats: { recipes: "receitas", favorites: "favoritas", items: "itens" },
     shoppingTitle: "Lista de compras",
     shoppingEmpty: "Adicione ingredientes de uma receita ou item avulso.",
@@ -12,50 +12,26 @@ const translations = {
     filterLabel: "Refeição",
     typeFilterLabel: "Tipo",
     categoryFilters: {
-      all: "Todas",
-      breakfast: "Café da manhã",
-      lunch: "Almoço",
-      dinner: "Jantar",
-      dessert: "Sobremesas",
-      snack: "Snacks",
+      all: "Todas", breakfast: "Café da manhã", lunch: "Almoço",
+      dinner: "Jantar", dessert: "Sobremesas", snack: "Snacks",
     },
     typeFilters: {
-      all: "Todos os tipos",
-      seafood: "Frutos do mar",
-      meat: "Carne",
-      chicken: "Frango",
-      pasta: "Pasta",
-      soup: "Sopa",
-      other: "Outro",
+      all: "Todos", seafood: "Frutos do mar", meat: "Carne",
+      chicken: "Frango", pasta: "Pasta", soup: "Sopa", other: "Outro",
     },
     formLabels: {
-      photo: "Foto da receita",
-      addPhoto: "Adicionar foto",
-      removePhoto: "Remover foto",
-      name: "Nome da receita",
-      category: "Refeição",
-      type: "Tipo",
-      time: "Tempo",
-      difficulty: "Dificuldade",
-      ingredients: "Ingredientes",
-      steps: "Preparo",
-      reset: "Novo",
-      save: "Salvar receita",
+      photo: "Foto da receita", addPhoto: "Adicionar foto", removePhoto: "Remover foto",
+      name: "Nome da receita", category: "Refeição", type: "Tipo", time: "Tempo",
+      difficulty: "Dificuldade", ingredients: "Ingredientes", steps: "Preparo",
+      reset: "Novo", save: "Salvar receita",
     },
     categories: {
-      breakfast: "Café da manhã",
-      lunch: "Almoço",
-      dinner: "Jantar",
-      dessert: "Sobremesas",
-      snack: "Snacks",
+      breakfast: "Café da manhã", lunch: "Almoço", dinner: "Jantar",
+      dessert: "Sobremesas", snack: "Snacks",
     },
     types: {
-      seafood: "Frutos do mar",
-      meat: "Carne",
-      chicken: "Frango",
-      pasta: "Pasta",
-      soup: "Sopa",
-      other: "Outro",
+      seafood: "Frutos do mar", meat: "Carne", chicken: "Frango",
+      pasta: "Pasta", soup: "Sopa", other: "Outro",
     },
     difficulties: { Easy: "Fácil", Medium: "Médio", Hard: "Difícil" },
     sectionKicker: "Caderno",
@@ -67,10 +43,12 @@ const translations = {
     noSteps: "Sem preparo anotado.",
     addShopping: "Adicionar compras",
     addButton: "Adicionar",
-    langButton: "EN",
+    newRecipe: "Nova receita",
+    modalTitle: "Nova receita",
+    modalEditTitle: "Editar receita",
   },
   en: {
-        brandNote: "A modern recipe notebook for planning, saving favorites, and shopping better.",
+    brandNote: "A modern recipe notebook for planning, saving favorites, and shopping better.",
     stats: { recipes: "recipes", favorites: "favorites", items: "items" },
     shoppingTitle: "Shopping list",
     shoppingEmpty: "Add ingredients from a recipe or a custom item.",
@@ -82,50 +60,26 @@ const translations = {
     filterLabel: "Meal",
     typeFilterLabel: "Type",
     categoryFilters: {
-      all: "All",
-      breakfast: "Breakfast",
-      lunch: "Lunch",
-      dinner: "Dinner",
-      dessert: "Desserts",
-      snack: "Snacks",
+      all: "All", breakfast: "Breakfast", lunch: "Lunch",
+      dinner: "Dinner", dessert: "Desserts", snack: "Snacks",
     },
     typeFilters: {
-      all: "All types",
-      seafood: "Seafood",
-      meat: "Meat",
-      chicken: "Chicken",
-      pasta: "Pasta",
-      soup: "Soup",
-      other: "Other",
+      all: "All", seafood: "Seafood", meat: "Meat",
+      chicken: "Chicken", pasta: "Pasta", soup: "Soup", other: "Other",
     },
     formLabels: {
-      photo: "Recipe photo",
-      addPhoto: "Add photo",
-      removePhoto: "Remove photo",
-      name: "Recipe name",
-      category: "Meal",
-      type: "Type",
-      time: "Time",
-      difficulty: "Difficulty",
-      ingredients: "Ingredients",
-      steps: "Instructions",
-      reset: "New",
-      save: "Save recipe",
+      photo: "Recipe photo", addPhoto: "Add photo", removePhoto: "Remove photo",
+      name: "Recipe name", category: "Meal", type: "Type", time: "Time",
+      difficulty: "Difficulty", ingredients: "Ingredients", steps: "Instructions",
+      reset: "New", save: "Save recipe",
     },
     categories: {
-      breakfast: "Breakfast",
-      lunch: "Lunch",
-      dinner: "Dinner",
-      dessert: "Desserts",
-      snack: "Snacks",
+      breakfast: "Breakfast", lunch: "Lunch", dinner: "Dinner",
+      dessert: "Desserts", snack: "Snacks",
     },
     types: {
-      seafood: "Seafood",
-      meat: "Meat",
-      chicken: "Chicken",
-      pasta: "Pasta",
-      soup: "Soup",
-      other: "Other",
+      seafood: "Seafood", meat: "Meat", chicken: "Chicken",
+      pasta: "Pasta", soup: "Soup", other: "Other",
     },
     difficulties: { Easy: "Easy", Medium: "Medium", Hard: "Hard" },
     sectionKicker: "Notebook",
@@ -137,15 +91,13 @@ const translations = {
     noSteps: "No instructions added.",
     addShopping: "Add to shopping",
     addButton: "Add",
-    langButton: "PT",
+    newRecipe: "New recipe",
+    modalTitle: "New recipe",
+    modalEditTitle: "Edit recipe",
   },
 };
 
-const storageKeys = {
-  recipes: "mealPlanner.recipes",
-  shopping: "mealPlanner.shopping",
-};
-
+const storageKeys = { recipes: "mealPlanner.recipes", shopping: "mealPlanner.shopping" };
 const categories = ["breakfast", "lunch", "dinner", "dessert", "snack"];
 const recipeTypes = ["seafood", "meat", "chicken", "pasta", "soup", "other"];
 
@@ -162,17 +114,16 @@ function createId() {
 }
 
 function svgPhoto(title, bg, accent, symbol) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
-      <rect width="800" height="520" fill="${bg}"/>
-      <path d="M0 410c160-90 295-35 418-112 101-64 174-145 382-96v318H0z" fill="${accent}" opacity=".22"/>
-      <g fill="none" stroke="#243226" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity=".78">
-        <path d="M182 180c70-48 145-48 226 0 76 45 145 42 210-10"/>
-        <path d="M204 284c78-54 164-51 254 8 65 42 124 40 178-6"/>
-      </g>
-      <text x="72" y="126" fill="#243226" font-family="Georgia, serif" font-size="58" font-weight="700">${symbol}</text>
-      <text x="72" y="430" fill="#243226" font-family="Georgia, serif" font-size="48" font-weight="700">${title}</text>
-    </svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+    <rect width="800" height="520" fill="${bg}"/>
+    <path d="M0 410c160-90 295-35 418-112 101-64 174-145 382-96v318H0z" fill="${accent}" opacity=".22"/>
+    <g fill="none" stroke="#243226" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity=".78">
+      <path d="M182 180c70-48 145-48 226 0 76 45 145 42 210-10"/>
+      <path d="M204 284c78-54 164-51 254 8 65 42 124 40 178-6"/>
+    </g>
+    <text x="72" y="126" fill="#243226" font-family="Georgia,serif" font-size="58" font-weight="700">${symbol}</text>
+    <text x="72" y="430" fill="#243226" font-family="Georgia,serif" font-size="48" font-weight="700">${title}</text>
+  </svg>`;
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
@@ -186,38 +137,20 @@ const placeholderPhotos = {
 
 const seedRecipes = [
   {
-    id: createId(),
-    name: "Omelete de ervas",
-    category: "breakfast",
-    type: "other",
-    time: 12,
-    difficulty: "Easy",
-    favorite: true,
-    photo: placeholderPhotos.breakfast,
+    id: createId(), name: "Omelete de ervas", category: "breakfast", type: "other",
+    time: 12, difficulty: "Easy", favorite: true, photo: placeholderPhotos.breakfast,
     ingredients: ["2 ovos", "1 colher de queijo", "salsinha", "tomate cereja"],
     steps: "Bata os ovos, misture os temperos e cozinhe em fogo baixo até firmar.",
   },
   {
-    id: createId(),
-    name: "Pasta de limão",
-    category: "dinner",
-    type: "pasta",
-    time: 24,
-    difficulty: "Medium",
-    favorite: false,
-    photo: svgPhoto("Pasta", "#f5e6c8", "#b63e2f", "🍋"),
+    id: createId(), name: "Pasta de limão", category: "dinner", type: "pasta",
+    time: 24, difficulty: "Medium", favorite: false, photo: svgPhoto("Pasta", "#f5e6c8", "#b63e2f", "🍋"),
     ingredients: ["massa", "limão siciliano", "parmesão", "manteiga"],
     steps: "Cozinhe a massa, emulsione o molho com limão e finalize com parmesão.",
   },
   {
-    id: createId(),
-    name: "Sopa rápida de legumes",
-    category: "dinner",
-    type: "soup",
-    time: 28,
-    difficulty: "Easy",
-    favorite: false,
-    photo: placeholderPhotos.dinner,
+    id: createId(), name: "Sopa rápida de legumes", category: "dinner", type: "soup",
+    time: 28, difficulty: "Easy", favorite: false, photo: placeholderPhotos.dinner,
     ingredients: ["cenoura", "batata", "abobrinha", "caldo de legumes"],
     steps: "Corte tudo pequeno, cozinhe no caldo e finalize com azeite.",
   },
@@ -230,6 +163,7 @@ let shoppingItems = load(storageKeys.shopping, []).map((item) => ({
   done: Boolean(item.done),
 }));
 
+// DOM refs
 const recipeForm = document.querySelector("#recipeForm");
 const recipeId = document.querySelector("#recipeId");
 const recipePhotoData = document.querySelector("#recipePhotoData");
@@ -248,18 +182,17 @@ const recipeTemplate = document.querySelector("#recipeCardTemplate");
 const searchInput = document.querySelector("#searchInput");
 const resultCount = document.querySelector("#resultCount");
 const emptyState = document.querySelector("#emptyState");
-const shoppingList = document.querySelector("#shoppingList");
-const shoppingEmpty = document.querySelector("#shoppingEmpty");
-const shoppingForm = document.querySelector("#shoppingForm");
-const shoppingInput = document.querySelector("#shoppingInput");
 const shoppingDashboardForm = document.querySelector("#shoppingDashboardForm");
 const shoppingDashboardInput = document.querySelector("#shoppingDashboardInput");
 const shoppingDashboardList = document.querySelector("#shoppingDashboardList");
 const shoppingDashboardEmpty = document.querySelector("#shoppingDashboardEmpty");
 const shoppingCount = document.querySelector("#shoppingCount");
-const typeFilter = document.querySelector("#typeFilter");
 const recipesView = document.querySelector("#recipesView");
 const shoppingView = document.querySelector("#shoppingView");
+const modalOverlay = document.querySelector("#modalOverlay");
+const openModalBtn = document.querySelector("#openModal");
+const closeModalBtn = document.querySelector("#closeModal");
+const modalTitle = document.querySelector("#modalTitle");
 
 function load(key, fallback) {
   const saved = localStorage.getItem(key);
@@ -271,9 +204,7 @@ function save() {
   localStorage.setItem(storageKeys.shopping, JSON.stringify(shoppingItems));
 }
 
-function normalize(value) {
-  return value.trim().toLowerCase();
-}
+function normalize(value) { return value.trim().toLowerCase(); }
 
 function normalizeRecipe(recipe) {
   const category = categories.includes(recipe.category) ? recipe.category : "dinner";
@@ -311,6 +242,21 @@ function getVisibleRecipes() {
   });
 }
 
+function openModal(editMode = false) {
+  modalTitle.textContent = editMode ? t().modalEditTitle : t().modalTitle;
+  modalOverlay.hidden = false;
+  document.body.style.overflow = "hidden";
+  recipeName.focus();
+}
+
+function closeModal() {
+  modalOverlay.hidden = true;
+  document.body.style.overflow = "";
+  recipeForm.reset();
+  recipeId.value = "";
+  setPhotoPreview("");
+}
+
 function render() {
   renderViews();
   renderRecipes();
@@ -323,10 +269,9 @@ function renderViews() {
   const showShopping = activeView === "shopping";
   recipesView.hidden = showShopping;
   shoppingView.hidden = !showShopping;
-  document.querySelector(".recipe-form-section").hidden = showShopping;
-  document.querySelector(".filters-panel").hidden = showShopping;
-  document.querySelectorAll("[data-view]").forEach((button) => {
-    button.classList.toggle("active", button.dataset.view === activeView);
+
+  document.querySelectorAll(".nav-item[data-view]").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.view === activeView);
   });
 }
 
@@ -342,10 +287,14 @@ function renderRecipes() {
     const categoryPill = card.querySelector(".category-pill");
     const typePill = card.querySelector(".type-pill");
     const favorite = card.querySelector(".favorite-button");
-    const image = card.querySelector("img");
+    const image = card.querySelector("img:not(.food-circle-img)");
+    const foodCircleImg = card.querySelector(".food-circle-img");
 
     image.src = recipe.photo || placeholderPhotos[recipe.category];
     image.alt = recipe.name;
+    foodCircleImg.src = recipe.photo || placeholderPhotos[recipe.category];
+    foodCircleImg.alt = recipe.name;
+
     categoryPill.textContent = tx.categories[recipe.category] || recipe.category;
     categoryPill.classList.add(recipe.category);
     typePill.textContent = tx.types[recipe.type] || recipe.type;
@@ -372,12 +321,11 @@ function renderRecipes() {
 }
 
 function renderShopping() {
-  renderShoppingList(shoppingList, shoppingEmpty, true);
-  renderShoppingList(shoppingDashboardList, shoppingDashboardEmpty, false);
+  renderShoppingList(shoppingDashboardList, shoppingDashboardEmpty);
   shoppingCount.textContent = t().shoppingCount(shoppingItems.filter((item) => !item.done).length);
 }
 
-function renderShoppingList(list, emptyElement, compact) {
+function renderShoppingList(list, emptyElement) {
   list.replaceChildren();
   emptyElement.style.display = shoppingItems.length ? "none" : "block";
 
@@ -396,16 +344,12 @@ function renderShoppingList(list, emptyElement, compact) {
     deleteButton.setAttribute("aria-label", `Remover ${item.name}`);
     deleteButton.textContent = "×";
 
-    checkbox.addEventListener("change", () => {
-      item.done = checkbox.checked;
-      render();
-    });
+    checkbox.addEventListener("change", () => { item.done = checkbox.checked; render(); });
     deleteButton.addEventListener("click", () => {
-      shoppingItems = shoppingItems.filter((shoppingItem) => shoppingItem.id !== item.id);
+      shoppingItems = shoppingItems.filter((s) => s.id !== item.id);
       render();
     });
 
-    row.classList.toggle("compact", compact);
     row.append(checkbox, label, deleteButton);
     list.append(row);
   });
@@ -413,8 +357,11 @@ function renderShoppingList(list, emptyElement, compact) {
 
 function renderStats() {
   document.querySelector("#totalRecipes").textContent = recipes.length;
-  document.querySelector("#totalFavorites").textContent = recipes.filter((recipe) => recipe.favorite).length;
-  document.querySelector("#totalItems").textContent = shoppingItems.filter((item) => !item.done).length;
+  document.querySelector("#totalFavorites").textContent = recipes.filter((r) => r.favorite).length;
+  document.querySelector("#totalItems").textContent = shoppingItems.filter((i) => !i.done).length;
+  document.querySelector("#navBadgeRecipes").textContent = recipes.length;
+  document.querySelector("#navBadgeFavorites").textContent = recipes.filter((r) => r.favorite).length;
+  document.querySelector("#navBadgeShopping").textContent = shoppingItems.filter((i) => !i.done).length;
 }
 
 function addIngredients(ingredients) {
@@ -432,10 +379,7 @@ function addShoppingItem(name) {
   const value = name.trim();
   if (!value) return;
   const exists = shoppingItems.some((item) => normalize(item.name) === normalize(value));
-  if (!exists) {
-    shoppingItems.push({ id: createId(), name: value, done: false });
-  }
-  shoppingInput.value = "";
+  if (!exists) shoppingItems.push({ id: createId(), name: value, done: false });
   shoppingDashboardInput.value = "";
   render();
 }
@@ -468,18 +412,12 @@ function editRecipe(id) {
   recipeIngredients.value = recipe.ingredients.join("\n");
   recipeSteps.value = recipe.steps;
   setPhotoPreview(recipe.photo);
-  activeView = "recipes";
-  renderViews();
-  recipeName.focus();
+  openModal(true);
 }
 
 function deleteRecipe(id) {
+  if (!confirm(lang === "pt" ? "Excluir esta receita?" : "Delete this recipe?")) return;
   recipes = recipes.filter((recipe) => recipe.id !== id);
-  if (recipeId.value === id) {
-    recipeForm.reset();
-    recipeId.value = "";
-    setPhotoPreview("");
-  }
   render();
 }
 
@@ -490,70 +428,75 @@ function toggleFavorite(id) {
 
 function applyTranslations() {
   const tx = t();
-
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-   document.querySelector(".brand-note").textContent = tx.brandNote;
-  document.querySelector("#totalRecipes").nextElementSibling.textContent = tx.stats.recipes;
-  document.querySelector("#totalFavorites").nextElementSibling.textContent = tx.stats.favorites;
-  document.querySelector("#totalItems").nextElementSibling.textContent = tx.stats.items;
-  document.querySelector(".panel-title h2").textContent = tx.shoppingTitle;
-  document.querySelector("#shoppingEmpty").textContent = tx.shoppingEmpty;
-  document.querySelector("#shoppingDashboardEmpty").textContent = tx.shoppingDashboardEmpty;
-  document.querySelector("#shoppingInput").placeholder = tx.shoppingPlaceholder;
-  document.querySelector("#shoppingDashboardInput").placeholder = tx.shoppingDashboardPlaceholder;
+
   document.querySelector("#searchInput").placeholder = tx.searchPlaceholder;
-  document.querySelector(".filter-label").textContent = tx.filterLabel;
-  document.querySelector(".type-filter-label").firstChild.textContent = tx.typeFilterLabel;
-  document.querySelector("#langToggle").textContent = tx.langButton;
-
-  document.querySelectorAll("[data-view]").forEach((button) => {
-    button.textContent = tx.tabs[button.dataset.view];
-  });
-  document.querySelectorAll("[data-category-filter]").forEach((button) => {
-    button.textContent = tx.categoryFilters[button.dataset.categoryFilter];
-  });
-
-  Array.from(typeFilter.options).forEach((option) => {
-    option.textContent = tx.typeFilters[option.value];
-  });
-  Array.from(recipeCategory.options).forEach((option) => {
-    option.textContent = tx.categories[option.value];
-  });
-  Array.from(recipeType.options).forEach((option) => {
-    option.textContent = tx.types[option.value];
-  });
-  Array.from(recipeDifficulty.options).forEach((option) => {
-    option.textContent = tx.difficulties[option.value];
-  });
-
-  const labels = document.querySelectorAll(".recipe-form label:not(.file-label)");
-  labels[0].firstChild.textContent = tx.formLabels.name;
-  labels[1].firstChild.textContent = tx.formLabels.category;
-  labels[2].firstChild.textContent = tx.formLabels.type;
-  labels[3].firstChild.textContent = tx.formLabels.time;
-  labels[4].firstChild.textContent = tx.formLabels.difficulty;
-  labels[5].firstChild.textContent = tx.formLabels.ingredients;
-  labels[6].firstChild.textContent = tx.formLabels.steps;
-  document.querySelector(".file-label").firstChild.textContent = tx.formLabels.addPhoto;
-  document.querySelector("#removePhoto").textContent = tx.formLabels.removePhoto;
-  document.querySelector("#resetForm").textContent = tx.formLabels.reset;
-  document.querySelector(".recipe-form .primary-button").textContent = tx.formLabels.save;
-  document.querySelector("#shoppingDashboardForm .primary-button").textContent = tx.addButton;
+  document.querySelector("#shoppingDashboardEmpty").textContent = tx.shoppingDashboardEmpty;
+  document.querySelector("#shoppingDashboardInput").placeholder = tx.shoppingDashboardPlaceholder;
+  document.querySelector("#statRecipesLabel").textContent = tx.stats.recipes;
+  document.querySelector("#statFavoritesLabel").textContent = tx.stats.favorites;
+  document.querySelector("#statItemsLabel").textContent = tx.stats.items;
+  document.querySelector(".new-recipe-btn").lastChild.textContent = ` ${tx.newRecipe}`;
   document.querySelector("#recipesView .section-kicker").textContent = tx.sectionKicker;
   document.querySelector("#recipesView h2").textContent = tx.sectionTitle;
   document.querySelector("#shoppingView .section-kicker").textContent = tx.shoppingKicker;
   document.querySelector("#shoppingView h2").textContent = tx.shoppingTitle;
+  document.querySelector("#shoppingDashboardForm .primary-button").textContent = tx.addButton;
+
+  // Lang toggle visual
+  document.querySelector("#langPT").classList.toggle("active", lang === "pt");
+  document.querySelector("#langEN").classList.toggle("active", lang === "en");
+
+  // Nav items
+  document.querySelectorAll(".nav-item[data-view]").forEach((btn) => {
+    btn.querySelector("span:not(.nav-badge)").textContent = tx.tabs[btn.dataset.view];
+  });
+
+  // Category filters in sidebar
+  document.querySelectorAll(".nav-item[data-category-filter]").forEach((btn) => {
+    btn.querySelector("span:not(.nav-badge)").textContent = tx.categoryFilters[btn.dataset.categoryFilter];
+  });
+
+  // Type pills in sidebar
+  document.querySelectorAll(".type-pill-nav[data-type-filter]").forEach((btn) => {
+    btn.textContent = tx.typeFilters[btn.dataset.typeFilter];
+  });
+
+  // Form labels
+  const labels = document.querySelectorAll(".recipe-form label:not(.file-label)");
+  if (labels[0]) labels[0].firstChild.textContent = tx.formLabels.name;
+  if (labels[1]) labels[1].firstChild.textContent = tx.formLabels.category;
+  if (labels[2]) labels[2].firstChild.textContent = tx.formLabels.type;
+  if (labels[3]) labels[3].firstChild.textContent = tx.formLabels.time;
+  if (labels[4]) labels[4].firstChild.textContent = tx.formLabels.difficulty;
+  if (labels[5]) labels[5].firstChild.textContent = tx.formLabels.ingredients;
+  if (labels[6]) labels[6].firstChild.textContent = tx.formLabels.steps;
+
+  document.querySelector(".file-label").firstChild.textContent = tx.formLabels.addPhoto;
+  document.querySelector("#removePhoto").textContent = tx.formLabels.removePhoto;
+  document.querySelector("#resetForm").textContent = tx.formLabels.reset;
+  document.querySelector(".recipe-form .primary-button").textContent = tx.formLabels.save;
+
+  Array.from(recipeCategory.options).forEach((o) => { o.textContent = tx.categories[o.value]; });
+  Array.from(recipeType.options).forEach((o) => { o.textContent = tx.types[o.value]; });
+  Array.from(recipeDifficulty.options).forEach((o) => { o.textContent = tx.difficulties[o.value]; });
+
+  document.querySelectorAll("[data-placeholder-pt]").forEach((el) => {
+    el.placeholder = lang === "pt" ? el.dataset.placeholderPt : el.dataset.placeholderEn;
+  });
+
   if (!recipePhotoData.value) setPhotoPreview("");
   render();
 }
 
+// Events
+openModalBtn.addEventListener("click", () => openModal(false));
+closeModalBtn.addEventListener("click", closeModal);
+
 recipeForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const ingredients = recipeIngredients.value
-    .split("\n")
-    .map((ingredient) => ingredient.trim())
-    .filter(Boolean);
-  const existing = recipes.find((recipe) => recipe.id === recipeId.value);
+  const ingredients = recipeIngredients.value.split("\n").map((i) => i.trim()).filter(Boolean);
+  const existing = recipes.find((r) => r.id === recipeId.value);
   const category = recipeCategory.value;
   const data = {
     id: recipeId.value || createId(),
@@ -569,11 +512,10 @@ recipeForm.addEventListener("submit", (event) => {
   };
 
   recipes = recipeId.value
-    ? recipes.map((recipe) => (recipe.id === recipeId.value ? data : recipe))
+    ? recipes.map((r) => (r.id === recipeId.value ? data : r))
     : [data, ...recipes];
-  recipeForm.reset();
-  recipeId.value = "";
-  setPhotoPreview("");
+
+  closeModal();
   render();
 });
 
@@ -591,51 +533,33 @@ recipePhoto.addEventListener("change", () => {
   reader.readAsDataURL(file);
 });
 
-removePhoto.addEventListener("click", () => {
-  recipePhoto.value = "";
-  setPhotoPreview("");
+removePhoto.addEventListener("click", () => { recipePhoto.value = ""; setPhotoPreview(""); });
+
+searchInput.addEventListener("input", (e) => { searchTerm = normalize(e.target.value); renderRecipes(); });
+
+document.querySelectorAll(".nav-item[data-view]").forEach((btn) => {
+  btn.addEventListener("click", () => { activeView = btn.dataset.view; render(); });
 });
 
-searchInput.addEventListener("input", (event) => {
-  searchTerm = normalize(event.target.value);
-  renderRecipes();
-});
-
-document.querySelectorAll("[data-category-filter]").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelector("[data-category-filter].active").classList.remove("active");
-    button.classList.add("active");
-    activeCategoryFilter = button.dataset.categoryFilter;
+document.querySelectorAll(".nav-item[data-category-filter]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".nav-item[data-category-filter]").forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeCategoryFilter = btn.dataset.categoryFilter;
     renderRecipes();
   });
 });
 
-typeFilter.addEventListener("change", () => {
-  activeTypeFilter = typeFilter.value;
-  renderRecipes();
-});
-
-document.querySelectorAll("[data-view]").forEach((button) => {
-  button.addEventListener("click", () => {
-    activeView = button.dataset.view;
-    render();
+document.querySelectorAll(".type-pill-nav[data-type-filter]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".type-pill-nav").forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeTypeFilter = btn.dataset.typeFilter;
+    renderRecipes();
   });
 });
 
-shoppingForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  addShoppingItem(shoppingInput.value);
-});
-
-shoppingDashboardForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  addShoppingItem(shoppingDashboardInput.value);
-});
-
-document.querySelector("#clearShopping").addEventListener("click", () => {
-  shoppingItems = [];
-  render();
-});
+shoppingDashboardForm.addEventListener("submit", (e) => { e.preventDefault(); addShoppingItem(shoppingDashboardInput.value); });
 
 document.querySelector("#langToggle").addEventListener("click", () => {
   lang = lang === "pt" ? "en" : "pt";
